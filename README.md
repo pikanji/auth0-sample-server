@@ -26,7 +26,9 @@ $ npm run start:prod
 
 ## Testing Endpoint
 
-Calling a public endpoint;
+Calling a private endpoint:
+Pass your JWT in authorization header.
+You can get test JWT (access_token) from the test tab of your API settings page in Auth0 management site.
 ```
-curl --request GET --url http://127.0.0.1:3000/mysub
+curl --request GET --url http://127.0.0.1:3000/mysub --header 'authorization: Bearer {your JWT}'
 ```
